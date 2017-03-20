@@ -1,0 +1,40 @@
+---
+title: "HW6: TEAM  [my team number/name here]"
+author: "[my team members here]"
+output: html_notebook
+---
+
+1.  Complete Exercise 7 in ISLR
+
+2.  For $p=2$ create a plot showing the contours of the log likelihood surface  and contours of the log density of $\beta_1$ and $\beta_2$ for the case of independent Cauchy priors   (Student t densities with 1 degree of freedom).  For the same likelihood, make a plots for  the Lasso or Ridge priors as Figure 6.7
+
+3.  Refer to Exercise 9 in ISLR and homework 4 with the College data.
+    a. split the data into a 50% training set and a 50% test set.
+    
+    b. Using the recommended transformations from HW4 for the normal regression model with your  most complex model (no variable selection), obtain the RMSE for predicting the number of applications (not the transformed response) for the test data under OLS.
+    
+    c. Using the same variables as above,  obtain the RMSE for the test data using ridge regression with $\lambda$ chosen by cross-validation (the cross-validation for choosing $\lambda$ should only use the training data).
+    
+    d. Using the same variables as above, obtain the RMSE for the test data using lasso with $\lambda$ chosen by cross-validation.  Report on which variables are selected by lasso.
+    
+    e.  Using the same variables, obtain the RMSE for the test data using one of the mixtures of $g$ priors under BMA and the best predictive model.  Report on  which variables are viewed as important under the BMA model.
+
+    f.  Using the same variables, obtain the RMSE for the test data using blasso with and without`RJ=TRUE`.    Report on  which variables are viewed as important under the  Baysian Lasso with variable selection.
+    
+    h.  Using the same variables, obtain the RMSE for the test data using the horseshoe prior,  `bhs` in `library(monomvn)`, with and without`RJ=TRUE`.    Report on  which variables are viewed as important under the  horseshoe with variable selection.
+    
+    g.  For the above methods that can produce prediction intervals, determine what percent of the test observations are included inside 95% prediction intervals and report a table of coverage values
+
+    h. Comment on the results obtained.  How accurately can you predict the number of applications?  Is there much difference in RMSEs among these methods? Is there much difference in coverage among these methods? 
+    
+
+4.  For the college data, the negative binomial model seemed to provide the best model.   Using the representation of the Negative Binomial as a gamma mixture of Poissons (HW4),   modify the JAGS code from lab so that the response has a Poisson distribution with mean `lambda[i]` and that `lambda[i]` has a gamma distriubtion as in problem 20 of HW4.   Using scaled predictors, implement one of the scale mixtures of normal priors (lasso  horseshoe, or other) in JAGS. Using JAGS to obtain predictions, report the RMSE and coverage of credible intervals for the test data.  
+
+
+5.   For your recommended model, provide credible intervals for all of the parameters, and pick 5 (or more) of the most important variables and provide a paragraph that provides an interpretation of the parameters (and intervals) that can be provided to a university admissions officer about which variables increase admissions. 
+
+    
+    
+
+   
+
